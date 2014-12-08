@@ -1,13 +1,24 @@
 # depslib dependency file v1.0
-1418050820 source:/home/bms/talos/main.cpp
+1418071655 source:/home/bms/talos/main.cpp
+	<chrono>
 	<iostream>
+	<thread>
 	<vector>
 	"phases.h"
+	"pseudoInterrupt.h"
 
-1418050852 source:/home/bms/talos/src/phases.cpp
+1418053554 source:/home/bms/talos/src/phases.cpp
 	"phases.h"
 	<iostream>
 
-1418049988 /home/bms/talos/include/phases.h
+1418070681 /home/bms/talos/include/phases.h
 	<vector>
+	<string>
+
+1418070226 source:/home/bms/talos/src/pseudoInterrupt.cpp
+	"pseudoInterrupt.h"
+
+1418070217 /home/bms/talos/include/pseudoInterrupt.h
+	<thread>
+	<chrono>
 

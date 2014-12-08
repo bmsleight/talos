@@ -2,9 +2,11 @@
 #define PHASES_H
 
 #include <vector>
+#include <string>
 using namespace std;
 
 /* Define some Globals use for a phase */
+#define TICK_MICROSECONDS 1000
 
 /* Phase Types */
 /* Each phase type will go in the order .... */
@@ -94,16 +96,18 @@ class Intergreen;
 class Phase
 {
     public:
-        Phase(unsigned char t);
+        Phase(string id, unsigned char t);
         virtual ~Phase();
         void min_time_set(unsigned char phase_step, unsigned char min_time);
         unsigned char time_since_green_seconds();
         void intergreen_add(Phase* phase, unsigned char seconds);
+        bool matches_id(string id);
         void debug_set_time_since_green_milliseconds(unsigned long m);
         void debug_cout_all_intergreen_remaining();
     protected:
     private:
         /* Status of phase */
+        string id_;
         unsigned char type_;
         unsigned char state_; // PHASE_GREEN 0, PHASE_RED 3 etc....
         unsigned char phase_change_; // PHASE_CHANGE_NONE 0, PHASE_CHANGE_TO_GREEN 1, PHASE_CHANGE_TO_GREEN_RED 2
