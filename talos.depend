@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1417981819 source:/home/bms/talos/main.cpp
+	<iostream>
+	<vector>
+	<vector>
+
+1417990874 source:/home/bms/talos/src/phases.cpp
+	"phases.h"
+	<iostream>
+
+1417990809 /home/bms/talos/include/phases.h
+	<vector>
+
